@@ -1,0 +1,171 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: #000000;
+}
+
+/* Logo */
+.logo {
+    flex: 1;
+}
+
+.logo-img {
+    height: 50px;  /* Ajuste o tamanho da logo conforme necessário */
+}
+.title-container {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;    /* centraliza verticalmente */
+    height: 150px;          /* altura que você quiser */
+    text-align: center;
+}
+.title-container h1 {
+    position: relative;
+    font-size: 36px;
+    color: #f8e3f7;  /* Cor do texto lilás */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 0;
+    background: linear-gradient(270deg, #b993d6, #8ca6db, #b993d6);
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+    box-shadow: 0 0 20px 5px rgba(196, 129, 196, 0.7);
+    
+}
+
+/* Fundo animado de gradiente */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Luzes cintilantes com pseudo-elemento */
+.title-container h1::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 2%, transparent 70%);
+    opacity: 0.6;
+    animation: flicker 3s infinite ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Animação para simular o cintilar */
+@keyframes flicker {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.2; }
+}
+.title-container h1 {
+    /* seu estilo atual aqui... */
+    color: #571864; /* cor do texto lilás */
+    -webkit-text-stroke: 1.5px #571864; /* contorno roxo */
+    -webkit-text-fill-color: #571864; /* cor do preenchimento do texto */
+}
+
+
+
+/* Menu */
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #523658;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #a67ec9;
+}
+
+
+/* Carrossel */
+.carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir completamente o espaço disponível */
+}
+
+/* Evitar corte das imagens */
+.carousel-slide img {
+    display: block;
+    object-fit: contain; /* Faz com que a imagem seja redimensionada para caber no contêiner sem ser cortada */
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do carrossel */
+    height: 100%; /* Faz com que a altura das imagens se ajuste à altura do carrossel */
+}
+
+.formacao-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #a67ec9; /* lilás */
+    text-align: center;
+}
+
+.formacao-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #a67ec9; /* lilás */
+}
+
+.formacao-container p {
+    font-size: 18px;
+    color: #d9c4e7; /* lilás mais claro */
+    margin-bottom: 10px;
+}
+
+
