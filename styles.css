@@ -158,14 +158,22 @@ body {
 .formacao-container h2 {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #a67ec9; /* lilás */
+    text-align: center;
 }
 
 .formacao-container p {
     font-size: 18px;
     color: #d9c4e7; /* lilás mais claro */
     margin-bottom: 10px;
+}
+.formacao-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #d9c4e7; /* lilás claro */
+    text-align: left;
 }
 
 .sobre-container {
@@ -235,4 +243,64 @@ body {
     padding: 0 20px;
     color: #d9c4e7; /* lilás claro */
     text-align: left;
+}
+.enviar {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a0a3d; /* fundo lilás escuro */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(166, 126, 201, 0.7);
+    color: #a67ec9;
+    text-align: center;
+}
+
+.enviar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #d9c4e7;
+}
+
+.enviar form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.enviar input[type="text"],
+.enviar input[type="email"],
+.enviar textarea {
+    padding: 12px;
+    border: 2px solid #a67ec9;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #2c1f4a;
+    color: #d9c4e7;
+    resize: vertical;
+}
+
+.enviar input[type="text"]::placeholder,
+.enviar input[type="email"]::placeholder,
+.enviar textarea::placeholder {
+    color: #bca6d9;
+}
+
+.enviar textarea {
+    min-height: 100px;
+}
+
+.enviar button {
+    background-color: #a67ec9;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.enviar button:hover {
+    background-color: #8c6bb9;
 }
